@@ -1,3 +1,10 @@
+def __generateTitle():
+    output = ''
+    for n in range(200*16):
+        output = output + '0,'
+    return output
+
+
 def generateNewMap(widthMap, heightMap):
         result = """
         <?xml version="1.0" encoding="UTF-8"?>
@@ -8,40 +15,30 @@ def generateNewMap(widthMap, heightMap):
             </tileset>
             <layer id="1" name="LAYER_BACKGROUND" width="200" height="200">
                 <data encoding="csv">
-                    @
-                    @ LAYER 1 DATA
-                    @
+                    {}
                 </data>
             </layer>
             <layer id="2" name="LAYER_GROUND" width="200" height="200">
                 <data encoding="csv">
-                    @
-                    @ LAYER 2 DATA
-                    @
+                    {}
                 </data>
             </layer>
             <layer id="3" name="LAYER_OBJECT_PASSIVE" width="200" height="200">
                 <data encoding="csv">
-                    @
-                    @ LAYER 3 DATA
-                    @    
+                    {}   
                 </data>
             </layer>
             <layer id="3" name="LAYER_OBJECT_ACTIVE" width="200" height="200">
                 <data encoding="csv">
-                    @
-                    @ LAYER 4 DATA
-                    @    
+                   {}   
                 </data>
             </layer>
             <layer id="3" name="LAYER_ENEMIES" width="200" height="200">
                 <data encoding="csv">
-                    @
-                    @ LAYER 4 DATA
-                    @    
+                   {}  
                 </data>
             </layer>
         </map>
             
-        """.format(widthMap, heightMap)
+        """.format(widthMap, heightMap,__generateTitle(),__generateTitle(),__generateTitle(),__generateTitle(),__generateTitle())
         return result
