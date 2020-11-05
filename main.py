@@ -1,2 +1,2 @@
-import Generator
-print(Generator.generateNewMap())
+from Generator import generateNewMap
+print(generateNewMap(200, 200))
