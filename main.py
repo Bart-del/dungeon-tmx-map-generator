@@ -1,4 +1,3 @@
-from Generator import __initialize_layer
-from Generator import generateNewMap
+from Generator import generate_new_Map
 
-generateNewMap(200,200)
+generate_new_Map(200, 200, 100)
